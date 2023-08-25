@@ -119,12 +119,6 @@ Total time: 2 seconds
 
 ```
 
-`ant gputest` and `ant junit` (`https://github.com/jlizier/jidt/wiki/AntScripts`) will fail (missing JUnit installation).
-
->You wish to run the JUnit test cases - this requires JUnit - for how to run JUnit with our ant script see JUnitTestCases and AntScripts;
-
-But this is fine, based on author's response (https://github.com/jlizier/jidt/issues/75#issuecomment-471368088)
-
 
 ### Notes
 Same error met at `https://github.com/jlizier/jidt/issues/80` and is solved by
