@@ -131,3 +131,42 @@ sudo apt-get install openjdk-8-jre openjdk-8-jdk
 >You wish to run the JUnit test cases - this requires JUnit - for how to run JUnit with our ant script see JUnitTestCases and AntScripts;
 
 But this is fine, based on author's response (https://github.com/jlizier/jidt/issues/75#issuecomment-471368088)
+
+
+### Running with GPU
+
+```
+(py38) yiren@dartmouth-CS110A:~/jidt$ python GeneratedCalculator.py
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_0 -> col_1) = 0.0098 nats (null: 0.0004 +/- 0.0115 std dev.; p(surrogate > measured)=0.21200 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_0 -> col_2) = 0.0056 nats (null: 0.0004 +/- 0.0106 std dev.; p(surrogate > measured)=0.31200 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_0 -> col_3) = -0.0020 nats (null: 0.0011 +/- 0.0110 std dev.; p(surrogate > measured)=0.61600 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_1 -> col_0) = 0.0017 nats (null: 0.0006 +/- 0.0104 std dev.; p(surrogate > measured)=0.44800 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_1 -> col_2) = -0.0083 nats (null: -0.0004 +/- 0.0108 std dev.; p(surrogate > measured)=0.77600 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_1 -> col_3) = -0.0097 nats (null: 0.0006 +/- 0.0108 std dev.; p(surrogate > measured)=0.82200 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_2 -> col_0) = 0.0006 nats (null: 0.0004 +/- 0.0113 std dev.; p(surrogate > measured)=0.51600 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_2 -> col_1) = -0.0118 nats (null: 0.0004 +/- 0.0113 std dev.; p(surrogate > measured)=0.86800 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_2 -> col_3) = -0.0165 nats (null: -0.0002 +/- 0.0105 std dev.; p(surrogate > measured)=0.93600 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_3 -> col_0) = -0.0086 nats (null: -0.0002 +/- 0.0111 std dev.; p(surrogate > measured)=0.79000 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_3 -> col_1) = 0.0199 nats (null: 0.0002 +/- 0.0110 std dev.; p(surrogate > measured)=0.04000 from 100 surrogates)
+Cannot use GPU for estimation based on new observations -- falling back to CPU calculation...
+TE_Kraskov (KSG)(col_3 -> col_2) = 0.0112 nats (null: 0.0003 +/- 0.0105 std dev.; p(surrogate > measured)=0.14800 from 100 surrogates)
+```
+
+GPU benchmark at `https://github.com/jlizier/jidt/wiki/GPU` is **OK**.
+
+```
+(py38) yiren@dartmouth-CS110A:~/jidt$ cd demos/java
+(py38) yiren@dartmouth-CS110A:~/jidt/demos/java$ bash example10GPUBenchmark.sh
+```
+<img src="nvidia-smi.png" width="800">
